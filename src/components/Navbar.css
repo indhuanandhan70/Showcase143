@@ -1,7 +1,7 @@
 /* ✅ Base Styles */
 .navbar {
   padding: 15px 30px;
-  background: linear-gradient(135deg, #333, #555);  /* Gradient background */
+  background: linear-gradient(135deg, #333, #555);  
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -10,20 +10,19 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Box shadow for depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .navbar-logo h1 {
   font-size: 28px;
   font-weight: bold;
-  letter-spacing: 1px;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .navbar-logo h1:hover {
-  color: #00bcd4;   /* Subtle color change on hover */
+  color: #00bcd4;  
 }
 
 /* ✅ Navbar Links */
@@ -45,11 +44,10 @@
   overflow: hidden;
 }
 
-/* ✅ Hover Effect */
 .nav-links a:hover {
-  background: #00bcd4; 
+  background: #00bcd4;  
   color: #fff;
-  transform: scale(1.1);   
+  transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);  
 }
 
