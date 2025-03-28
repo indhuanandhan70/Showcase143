@@ -2,7 +2,7 @@
 .navbar {
   padding: 15px 30px;
   background: linear-gradient(135deg, #333, #555);  /* Gradient background */
-  color: #686464;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,34 +19,37 @@
   font-weight: bold;
   letter-spacing: 1px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .navbar-logo h1:hover {
-  color: blue;   /* Subtle color change on hover */
+  color: #00bcd4;   /* Subtle color change on hover */
 }
 
+/* ✅ Navbar Links */
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
+  transition: all 0.3s ease;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 10px 25px;
+  padding: 10px 20px;
   transition: 0.3s;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
 
-/* ✅ Stylish Hover Effect */
+/* ✅ Hover Effect */
 .nav-links a:hover {
   background: #00bcd4; 
   color: #fff;
-  transform: scale(1.1);    /* Slight scaling effect */
+  transform: scale(1.1);   
   box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);  
 }
 
@@ -67,11 +70,11 @@
 /* ✅ Mobile and Tablet Styles */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 10px 20px;
+    padding: 15px 20px;
   }
 
   .navbar-logo h1 {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .nav-links {
@@ -81,27 +84,28 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 60px);
-    background: #444; 
+    background: #222;  
     z-index: 999;
     transition: 0.5s ease-in-out;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   }
 
   .nav-links.open {
-    left: 0; /* Slide menu in when open */
+    left: 0;   /* Menu slides in when open */
   }
 
   .nav-links a {
     padding: 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
+    width: 100%;
   }
 
   .hamburger {
     display: block; 
   }
 
-  /* ✅ Animated Hamburger */
+  /* ✅ Hamburger Animation */
   .hamburger.active div:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
@@ -115,7 +119,7 @@
   }
 }
 
-/* ✅ Extra Small Screens (Phones) */
+/* ✅ Small Phones */
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
@@ -131,7 +135,7 @@
   }
 }
 
-/* ✅ Desktop (large screens) */
+/* ✅ Desktop */
 @media (min-width: 1025px) {
   .nav-links {
     display: flex;
