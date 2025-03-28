@@ -1,21 +1,16 @@
 import React, { useState } from 'react';  
+import { Link } from 'react-router-dom';  
 import './Navbar.css';  
 
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);  
 
-  // ✅ Toggle menu function
   const toggleMenu = () => {  
     setIsOpen(!isOpen);  
   };  
 
-  // ✅ Close menu and scroll smoothly when a link is clicked
-  const handleNavClick = (id) => {  
-    const section = document.getElementById(id);  
-    if (section) {  
-      section.scrollIntoView({ behavior: 'smooth' });  
-    }  
-    setIsOpen(false);  // Close the menu after navigation
+  const closeMenu = () => {  
+    setIsOpen(false);  // Close the menu after clicking a link  
   };  
 
   return (  
@@ -25,11 +20,12 @@ const Navbar = () => {
       </div>  
 
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>  
-        <li><a href="#about" onClick={() => handleNavClick('about')}>About</a></li>  
-        <li><a href="#projects" onClick={() => handleNavClick('projects')}>Projects</a></li>  
-        <li><a href="#skills" onClick={() => handleNavClick('skills')}>Skills</a></li>  
-        <li><a href="#certificates" onClick={() => handleNavClick('certificates')}>Certificates</a></li>  
-        <li><a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a></li>  
+        <li><Link to="/" onClick={closeMenu}>Home</Link></li>  
+        <li><Link to="/about" onClick={closeMenu}>About</Link></li>  
+        <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>  
+        <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>  
+        <li><Link to="/certificates" onClick={closeMenu}>Certificates</Link></li>  
+        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>  
       </ul>  
 
       <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>  
