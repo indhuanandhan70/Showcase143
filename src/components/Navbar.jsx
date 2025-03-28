@@ -1,12 +1,10 @@
 import React, { useState } from 'react';  
-import { Link } from 'react-router-dom';  
 import './Navbar.css';  
-import { FaBars, FaTimes } from 'react-icons/fa';  
 
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);  
 
-  const toggleNavbar = () => {  
+  const toggleMenu = () => {  
     setIsOpen(!isOpen);  
   };  
 
@@ -15,18 +13,19 @@ const Navbar = () => {
       <div className="navbar-logo">  
         <h1>My Portfolio</h1>  
       </div>  
-      
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>  
-        <Link to="/">Home</Link>  
-        <Link to="/about">About</Link>  
-        <Link to="/skills">Skills</Link>  
-        <Link to="/projects">Projects</Link>  
-        <Link to="/certificates">Certificates</Link>  
-       
-      </div>  
 
-      <div className="hamburger" onClick={toggleNavbar}>  
-        {isOpen ? <FaTimes /> : <FaBars />}  
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>  
+        <li><a href="#about">About</a></li>  
+        <li><a href="#projects">Projects</a></li>  
+        <li><a href="#skills">Skills</a></li>  
+        <li><a href="#certificates">Certificates</a></li>  
+        <li><a href="#contact">Contact</a></li>  
+      </ul>  
+
+      <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>  
+        <div></div>  
+        <div></div>  
+        <div></div>  
       </div>  
     </nav>  
   );  
