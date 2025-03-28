@@ -1,0 +1,202 @@
+/* Home.css */
+
+/* General Styling */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f4f4f4;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Trendy font */
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  width: 60px;   /* Smaller profile picture */
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.home-content h1 {
+  font-size: 3.5rem;    /* Bigger, bolder heading */
+  font-weight: 700;
+  color: #222;          /* Dark, trendy color */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.4rem;     /* Larger description */
+  color: #444;
+  margin: 30px 0;
+  line-height: 1.8;
+  font-weight: 500;      /* Bolder description */
+}
+
+.role {
+  color: #28a745;
+  font-weight: 700;
+  font-size: 1.6rem;     /* Bigger and bolder role */
+  text-transform: uppercase;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.3rem;      /* Larger buttons */
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;    /* Rounded, trendy buttons */
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+  background: #0056b3;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.social-icons button {
+  background: none;
+  border: none;
+  font-size: 2.5rem;     /* Larger social icons */
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons button:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* ✅ Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 3rem;
+  }
+  .profile-image {
+    width: 50px; 
+    height: 50px; 
+  }
+  .btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 20px;
+  }
+  
+  .profile-image {
+    width: 45px; 
+    height: 45px;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icons button {
+    font-size: 2rem;
+  }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image {
+    width: 40px; 
+    height: 40px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .social-icons button {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,191 @@
+/* About.css */
+
+/* General Styling */
+.about {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #f4f4f4, #e0f7fa); /* Gradient background */
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Trendy font */
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #444; 
+}
+
+.about h2, .about h3 {
+  font-size: 3rem;              /* Bigger headings */
+  color: #007bff;               /* Highlight color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;              /* Bold and stylish */
+  transition: color 0.3s ease;
+}
+
+.about h2:hover, .about h3:hover {
+  color: #ff4081;                /* Attractive hover color */
+}
+
+.about p {
+  font-size: 1.4rem;             /* Larger content */
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 2;
+  font-weight: 500;
+}
+
+/* Profile Image Styling */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-image {
+  width: 180px;                   /* Smaller image */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 24px rgba(0, 123, 255, 0.3); /* Attractive shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  border: 4px solid #007bff;      /* Highlighted border */
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 16px 32px rgba(0, 123, 255, 0.5);
+}
+
+/* Highlighted Text */
+.highlight {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: #e8f5e9;           /* Light green highlight background */
+  padding: 5px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.highlight:hover {
+  background: #28a745;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;            /* Rounded, trendy buttons */
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+  background: #ff4081;            /* Attractive hover color */
+  box-shadow: 0 6px 18px rgba(255, 64, 129, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* ✅ Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 40px;
+  }
+
+  .about-content {
+    line-height: 1.7;
+  }
+
+  .about h2, .about h3 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+
+  .profile-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about h2, .about h3 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h2, .about h3 {
+    font-size: 1.7rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}

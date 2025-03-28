@@ -1,0 +1,170 @@
+/* Projects.css */
+
+/* General Styling */
+.projects {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #f4f4f4, #e0f7fa); /* Gradient background */
+  text-align: left;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section Title */
+.projects h2 {
+  font-size: 3rem;                       /* Large, bold heading */
+  color: #007bff;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.projects h2:hover {
+  color: #ff4081;                         /* Hover effect */
+}
+
+/* Project Item */
+.project-item {
+  margin-bottom: 60px;
+  padding: 30px;
+  border-left: 8px solid #007bff;         /* Stylish border */
+  transition: 0.3s;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 123, 255, 0.1);  
+  border-radius: 10px;
+}
+
+.project-item:hover {
+  border-left: 8px solid #ff4081;         /* Hover color */
+  box-shadow: 0 12px 30px rgba(255, 64, 129, 0.2);
+}
+
+/* Project Title */
+.project-item h3 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+  font-weight: 700;
+}
+
+.project-item:hover h3 {
+  color: #ff4081;                         /* Hover color change */
+}
+
+/* Project Description */
+.project-item p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;                     /* Rounded button */
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
+}
+
+.btn:hover {
+  background: #ff4081;                     /* Hover color */
+  box-shadow: 0 8px 24px rgba(255, 64, 129, 0.5);
+}
+
+/* ✅ Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 80px 40px;
+  }
+
+  .projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-item {
+    padding: 25px;
+  }
+
+  .project-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-item p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 30px;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-item {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .project-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-item p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+  .projects {
+    padding: 40px 20px;
+  }
+
+  .projects h2 {
+    font-size: 1.7rem;
+  }
+
+  .project-item {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .project-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-item p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

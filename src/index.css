@@ -1,0 +1,17 @@
+*{
+  margin:0;
+}
+body{
+  height: 100vh;
+  background-image:linear-gradient(white,blue );
+}
+/* Global responsiveness */
+.container {
+  display: flex;
+  flex-wrap: wrap;    /* Wrap items on smaller screens */
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1 1 300px;    /* Adjust size dynamically */
+}

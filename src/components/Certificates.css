@@ -1,0 +1,186 @@
+/* Certificates.css */
+
+/* General Styling */
+.certificates {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #f4f4f4, #e0f7fa);  /* Gradient background */
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section Title */
+.certificates-title {
+  font-size: 3rem;                           /* Large, bold heading */
+  color: #007bff;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.certificates-title:hover {
+  color: #ff4081;                             /* Hover effect */
+}
+
+/* Container */
+.certificates-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Certificate Card */
+.certificate-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 123, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;                            /* Clip overflow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 1000px;                           /* Max width */
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 123, 255, 0.3);
+}
+
+/* Certificate Image */
+.certificate-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;                          /* Ensures image fills its container */
+  transition: transform 0.3s;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.05);                      /* Slight zoom effect on hover */
+}
+
+/* Certificate Info */
+.certificate-info {
+  padding: 30px;
+  text-align: left;
+}
+
+.certificate-info h3 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.certificate-card:hover .certificate-info h3 {
+  color: #ff4081;                             /* Hover color */
+}
+
+.certificate-info p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ✅ Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .certificates {
+    padding: 80px 40px;
+  }
+
+  .certificates-title {
+    font-size: 2.5rem;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .certificate-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .certificate-info {
+    padding: 25px;
+  }
+
+  .certificate-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .certificate-info p {
+    font-size: 1.1rem;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .certificates {
+    padding: 60px 30px;
+  }
+
+  .certificates-title {
+    font-size: 2rem;
+  }
+
+  .certificate-card {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .certificate-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .certificate-info {
+    padding: 20px;
+  }
+
+  .certificate-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .certificate-info p {
+    font-size: 1rem;
+  }
+}
+
+/* For Small Phones */
+@media (max-width: 480px) {
+  .certificates {
+    padding: 40px 20px;
+  }
+
+  .certificates-title {
+    font-size: 1.8rem;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .certificate-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .certificate-info {
+    padding: 18px;
+  }
+
+  .certificate-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .certificate-info p {
+    font-size: 0.95rem;
+  }
+}

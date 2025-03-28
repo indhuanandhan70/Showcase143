@@ -1,0 +1,140 @@
+/* ✅ Base Styles */
+.navbar {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #333, #555);  /* Gradient background */
+  color: #686464;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Box shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.navbar-logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.navbar-logo h1:hover {
+  color: #00bcd4;   /* Subtle color change on hover */
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 25px;
+  transition: 0.3s;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Stylish Hover Effect */
+.nav-links a:hover {
+  background: #00bcd4; 
+  color: #fff;
+  transform: scale(1.1);    /* Slight scaling effect */
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);  
+}
+
+/* ✅ Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 4px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* ✅ Mobile and Tablet Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo h1 {
+    font-size: 24px; 
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: #444; 
+    z-index: 999;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.open {
+    left: 0; /* Slide menu in when open */
+  }
+
+  .nav-links a {
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  /* ✅ Animated Hamburger */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* ✅ Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-logo h1 {
+    font-size: 22px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+/* ✅ Desktop (large screens) */
+@media (min-width: 1025px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+  }
+}
