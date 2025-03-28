@@ -22,7 +22,7 @@
 }
 
 .navbar-logo h1:hover {
-  color: black;   /* Subtle color change on hover */
+  color: blue;   /* Subtle color change on hover */
 }
 
 .nav-links {
