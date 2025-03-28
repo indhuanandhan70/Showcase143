@@ -1,16 +1,13 @@
 import React, { useState } from 'react';  
 import { Link } from 'react-router-dom';  
 import './Navbar.css';  
+import { FaBars, FaTimes } from 'react-icons/fa';  
 
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);  
 
-  const toggleMenu = () => {  
+  const toggleNavbar = () => {  
     setIsOpen(!isOpen);  
-  };  
-
-  const closeMenu = () => {  
-    setIsOpen(false);  // Close the menu after clicking a link  
   };  
 
   return (  
@@ -18,20 +15,18 @@ const Navbar = () => {
       <div className="navbar-logo">  
         <h1>My Portfolio</h1>  
       </div>  
+      
+      <div className={`nav-links ${isOpen ? 'open' : ''}`}>  
+        <Link to="/">Home</Link>  
+        <Link to="/about">About</Link>  
+        <Link to="/skills">Skills</Link>  
+        <Link to="/projects">Projects</Link>  
+        <Link to="/certificates">Certificates</Link>  
+       
+      </div>  
 
-      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>  
-        <li><Link to="/" onClick={closeMenu}>Home</Link></li>  
-        <li><Link to="/about" onClick={closeMenu}>About</Link></li>  
-        <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>  
-        <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>  
-        <li><Link to="/certificates" onClick={closeMenu}>Certificates</Link></li>  
-        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>  
-      </ul>  
-
-      <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>  
-        <div></div>  
-        <div></div>  
-        <div></div>  
+      <div className="hamburger" onClick={toggleNavbar}>  
+        {isOpen ? <FaTimes /> : <FaBars />}  
       </div>  
     </nav>  
   );  
