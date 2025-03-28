@@ -1,7 +1,7 @@
 /* ✅ Base Styles */
 .navbar {
   padding: 15px 30px;
-  background: linear-gradient(135deg, #333, #555);  
+  background: linear-gradient(135deg, #333, #555);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -17,38 +17,37 @@
 .navbar-logo h1 {
   font-size: 28px;
   font-weight: bold;
+  letter-spacing: 1px;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .navbar-logo h1:hover {
-  color: #00bcd4;  
+  color: #00bcd4;
 }
 
-/* ✅ Navbar Links */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   list-style: none;
-  transition: all 0.3s ease;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   transition: 0.3s;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
 
+/* ✅ Stylish Hover Effect */
 .nav-links a:hover {
-  background: #00bcd4;  
+  background: #00bcd4;
   color: #fff;
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);  
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
 }
 
 /* ✅ Hamburger Menu */
@@ -68,7 +67,7 @@
 /* ✅ Mobile and Tablet Styles */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 
   .navbar-logo h1 {
@@ -82,28 +81,27 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 60px);
-    background: #222;  
+    background: #444;
     z-index: 999;
     transition: 0.5s ease-in-out;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   }
 
   .nav-links.open {
-    left: 0;   /* Menu slides in when open */
+    left: 0;  /* Slide in when open */
   }
 
   .nav-links a {
     padding: 20px;
     text-align: center;
-    font-size: 20px;
-    width: 100%;
+    font-size: 22px;
   }
 
   .hamburger {
-    display: block; 
+    display: block;
   }
 
-  /* ✅ Hamburger Animation */
+  /* ✅ Animated Hamburger */
   .hamburger.active div:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
@@ -117,7 +115,7 @@
   }
 }
 
-/* ✅ Small Phones */
+/* ✅ Extra Small Screens (Phones) */
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 15px;
@@ -133,7 +131,7 @@
   }
 }
 
-/* ✅ Desktop */
+/* ✅ Desktop (large screens) */
 @media (min-width: 1025px) {
   .nav-links {
     display: flex;
